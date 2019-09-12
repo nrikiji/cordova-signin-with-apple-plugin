@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-signin-with-apple-plugin" version="0.0.2">
+  <name>Signin With Apple</name>
+  <js-module src="www/signinWithApple.js">
+    <clobbers target="signinWithApple" />
+  </js-module>
+
+  <engines>
+    <engine name="cordova" version=">=7.1.0"/>
+    <engine name="cordova-ios" version=">=4.5.0"/>
+  </engines>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="SigninWithApple">
+        <param name="ios-package" value="SigninWithApple" />
+      </feature>
+    </config-file>
+
+    <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+    <source-file src="src/ios/SigninWithApple.swift" />
+
+    <config-file target="*-Debug.plist" parent="com.apple.developer.applesignin">
+      <array>
+        <string>Default</string>
+      </array>
+    </config-file>
+
+    <config-file target="*-Release.plist" parent="com.apple.developer.applesignin">
+      <array>
+        <string>Default</string>
+      </array>
+    </config-file>
+  </platform>
+
+</plugin>
