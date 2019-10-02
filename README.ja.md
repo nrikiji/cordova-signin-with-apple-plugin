@@ -27,7 +27,9 @@ cordova plugin add cordova-signin-with-apple-plugin
 ## Supported Platforms
 - iOS (>=13.0)
 
-## Example
+## Usage
+
+### Example
 
 ionicでの使用例
 ```js
@@ -75,4 +77,13 @@ angular.module('starter', ['ionic'])
       });
     }
   });
+```
+
+### Error Code
+errorコールバックでは以下の形式のエラーを返します
+```
+{
+  code: -1: iOSバージョンが不正です(< 13), -2:パラメータが不正です, -3: 認証に失敗しました
+  description: エラーメッセージ
+}
 ```
