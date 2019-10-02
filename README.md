@@ -27,7 +27,9 @@ cordova plugin add cordova-signin-with-apple-plugin
 ## Supported Platforms
 - iOS (>=13.0)
 
-## Example
+## Usage
+
+### Example
 
 ionic
 ```js
@@ -75,4 +77,13 @@ angular.module('starter', ['ionic'])
       });
     }
   });
+```
+
+### Error Code
+error callback returns an error of the form 　
+```
+{
+  code: -1: Incorrect iOS version(< 13), -2:Invalid parameter, -3: authorization failed
+  description: Error message
+}
 ```
