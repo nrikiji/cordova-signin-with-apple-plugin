@@ -1,6 +1,6 @@
 {
     "name": "cordova-signin-with-apple-plugin",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "",
     "cordova": {
         "id": "cordova-signin-with-apple-plugin",
